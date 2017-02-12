@@ -1,0 +1,36 @@
+<%= ENV['MONGOID_ENV'] %>:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        read:
+          mode: :primary_preferred
+    slaves:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        read:
+          mode: :secondary_preferred
+development:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        read:
+          mode: :primary_preferred
+    slaves:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        read:
+          mode: :secondary_preferred
+test:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        read:
+          mode: :primary_preferred
+    slaves:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        read:
+          mode: :secondary_preferred
