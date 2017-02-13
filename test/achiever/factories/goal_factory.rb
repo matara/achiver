@@ -1,6 +1,5 @@
 require 'achiever/domain/goal'
 require 'achiever/repositories/goal_repository'
-require 'achiever/factories/goal_factory'
 
 module Achiever
   module Factories
